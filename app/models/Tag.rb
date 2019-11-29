@@ -1,3 +1,4 @@
 class Tag < ActiveRecord::Base 
-    has_many :dishes , through: :dishtags
+    has_many :dishes , through: :dish_tags
 end 
+
