@@ -1,5 +1,4 @@
 
-
 Restaurant.destroy_all
 Dish.destroy_all
 Tag.destroy_all
@@ -23,22 +22,33 @@ gold = Restaurant.create(name:"The Golden Coral")
 spag1 = Dish.create(name:"Spaghetti Bolognaise" , restaurant_name: olive.name) 
 spag2 = Dish.create(name: "Pasta Alfredo",restaurant_name: olive.name)
 spag3 = Dish.create(name: "Super Green Pesto",restaurant_name: olive.name)
+spag4 = Dish.create(name: "Super Green Pesto",restaurant_name: olive.name)
+chicken5 = Dish.create(name: "Chicken Alfredo",restaurant_name: olive.name)
+chicken6 = Dish.create(name: "Chicken A La Carte",restaurant_name: olive.name)
+chicken7 = Dish.create(name: "Chicken in Mushroom",restaurant_name: olive.name)
+meat8 = Dish.create(name: "Serloin Steak 10 Ounces",restaurant_name: olive.name)
+meat9 = Dish.create(name: "Big Steak Rare",restaurant_name: olive.name)
+meat10 = Dish.create(name: "Serloin Steak 5 ounces",restaurant_name: olive.name)
 
-#### old seed ###
+tag1 = Tag.create(name:"Vegetarian")
+tag2 = Tag.create(name:"Glutton free")
+tag3 = Tag.create(name:"Spicy Hot")
+tag4 = Tag.create(name:"Spicy Mild")
+tag5 = Tag.create(name:"Spicy Crazy")
+tag6 = Tag.create(name:"Spicy Crazy Hot")
+tag7 = Tag.create(name:"Vegetarian Delight")
+tag8 = Tag.create(name:"Vegetarian Healthy")
+tag9 = Tag.create(name:"Spicy Madness")
+tag10 = Tag.create(name:"Spicy Delicious")
 
-# ann = User.create(username: "ann")
-# paul = User.create(username: "paul")
+DishTag.create(dish_id:spag1.id , tag_id:tag1.id) 
+DishTag.create(dish_id:spag1.id , tag_id:tag2.id) 
+DishTag.create(dish_id:spag1.id , tag_id:tag3.id) 
+DishTag.create(dish_id:spag2.id , tag_id:tag1.id) 
+DishTag.create(dish_id:spag2.id , tag_id:tag2.id) 
+DishTag.create(dish_id:spag2.id , tag_id:tag3.id) 
+DishTag.create(dish_id:spag3.id , tag_id:tag1.id) 
+DishTag.create(dish_id:spag3.id , tag_id:tag2.id) 
+DishTag.create(dish_id:spag3.id , tag_id:tag3.id) 
 
-# Tweet.create(content: "I love coffee", user_id: paul.id)
-# Tweet.create(content: "I am Paul", user_id: paul.id)
-# Tweet.create(content: "I love water", user_id: ann.id)
-# Tweet.create(content: "I'm Ann", user_id: ann.id)
 
-# coffee = Drink.create(name: "Coffee")
-# tea = Drink.create(name: "Tea")
-# water = Drink.create(name: "Water")
-
-# UserDrink.create(user_id: ann.id, drink_id: water.id)
-# UserDrink.create(drink_id: tea.id, user_id: ann.id)
-# UserDrink.create(drink_id: tea.id, user_id: paul.id)
-# UserDrink.create(drink_id: coffee.id, user_id: paul.id)
